@@ -3,6 +3,10 @@ import { View, Text } from "@tarojs/components";
 import { useLoad } from "@tarojs/taro";
 import "./index.scss";
 
+// import subpages
+import FlightIndex from "../flight/index";
+import NoExploit from "../../components/NoExploit"
+
 const DEFAULT_TAB_LIST = [
   { title: "title1", tab: "flight", index: 0 },
   { title: "title2", tab: "train", index: 1 },
@@ -47,9 +51,9 @@ export default class Index extends Component {
           </View>
         </View>
         {DEFAULT_TAB_LIST[tabIndex]["tab"] === "flight" ? (
-          <View className="content">flight</View>
+          <FlightIndex />
         ) : (
-          <View className="content">under construction</View>
+          <NoExploit />
         )}
       </View>
       // show the view according to the selected top tab
