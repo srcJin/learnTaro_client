@@ -12,7 +12,7 @@
       font-size: 32px;
       position: relative;
       &.active {
-        color: #{$primaryColor};
+        color: #00dfff;
         font-weight: 600;
       }
     }
@@ -32,7 +32,7 @@
         transform: translateX(-50%);
         border-radius: 6px;
         bottom: 0;
-        background: #{$primaryColor};
+        background: #00dfff;
         transition: all .3s ease-in-out;
       }
     }
