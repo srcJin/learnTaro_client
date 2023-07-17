@@ -1,16 +1,50 @@
-import { View, Text } from '@tarojs/components'
-import { useLoad } from '@tarojs/taro'
-import './index.scss'
+import { Component } from "react";
+import { View, Text } from "@tarojs/components";
+import { useLoad } from "@tarojs/taro";
+import "./index.scss";
 
-export default function Index() {
+const DEFAULT_TAB_LIST = [
+  { title: "title1", tab: "flight", index: 0 },
+  { title: "title2", tab: "train", index: 1 },
+  { title: "title3", tab: "hotel", index: 2 },
+  { title: "title4", tab: "bus", index: 3 },
+];
 
-  useLoad(() => {
-    console.log('Page loaded.')
-  })
+// define a state for default tab selected
+export default class Index extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tabIndex: 0, // default index selected
+    };
+  }
 
-  return (
-    <View className='index'>
-      <Text>Hello world!</Text>
-    </View>
-  )
+  switchTab = (index) => {
+    this.setState({
+      tabIndex: index,
+    });
+  };
+
+  render() {
+    const { tabIndex } = this.state;
+    return (
+      <View className="index-container">
+        <View className="top">
+          <View className="index-tab">
+            {DEFAULT_TAB_LIST.map((item) => (
+              // dynamically iterate className
+              // default selection is defined by props
+              <View
+                key={item.tab}
+                className={`index_tab_item ${item.tab} ${tabIndex === item.index ? "current" : ""}`}
+                onClick={() => this.switchTab(item.index)}
+              >
+                {item.title}
+              </View>
+            ))}
+          </View>
+        </View>
+      </View>
+    );
+  }
 }
