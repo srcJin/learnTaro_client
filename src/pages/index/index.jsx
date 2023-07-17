@@ -36,7 +36,9 @@ export default class Index extends Component {
               // default selection is defined by props
               <View
                 key={item.tab}
-                className={`index_tab_item ${item.tab} ${tabIndex === item.index ? "current" : ""}`}
+                className={`index_tab_item ${item.tab} ${
+                  tabIndex === item.index ? "current" : ""
+                }`}
                 onClick={() => this.switchTab(item.index)}
               >
                 {item.title}
@@ -44,7 +46,13 @@ export default class Index extends Component {
             ))}
           </View>
         </View>
+        {DEFAULT_TAB_LIST[tabIndex]["tab"] === "flight" ? (
+          <View className="content">flight</View>
+        ) : (
+          <View className="content">under construction</View>
+        )}
       </View>
+      // show the view according to the selected top tab
     );
   }
 }

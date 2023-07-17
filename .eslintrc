@@ -4,7 +4,8 @@
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    "no-unused-vars": ["error", { "varsIgnorePattern": "Taro|wx" }],
+    "no-unused-vars": "off",
+    // "no-unused-vars": ["off", { "varsIgnorePattern": "Taro|wx" }],
     "no-mixed-spaces-and-tabs": 2, // 禁止空格和 tab 的混合缩进
     "no-debugger": 2, //禁止有debugger
     "space-infix-ops": 2, // 要求操作符周围有空格
