@@ -40,7 +40,11 @@ export default class FlightIndex extends PureComponent {
             tabList={FLIGHT_TABS}
             onTabClick={this.handleTabClick}
             className="flight-index-tab"
-          ></Tab>
+          >
+            <SwiperItem>1111</SwiperItem>
+            <SwiperItem>2222</SwiperItem>
+            <SwiperItem>3333</SwiperItem>
+          </Tab>
         </View>
       </View>
     );
