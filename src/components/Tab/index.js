@@ -43,7 +43,7 @@ export default class Tab extends PureComponent {
   handleChange = (e) => {
     const id = e.detail.current;
     this.setState(
-      {
+      { 
         currentId: id,
       },
       () => {
