@@ -1,3 +1,5 @@
+import path from 'path'
+
 const config = {
   projectName: 'myApp',
   date: '2023-7-17',
@@ -75,6 +77,10 @@ const config = {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
       }
     }
+  },
+  alias: {
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/common': path.resolve(__dirname, '..', 'src/common'),
   }
 }
 
