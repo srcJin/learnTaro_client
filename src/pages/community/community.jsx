@@ -1,17 +1,16 @@
 import { Component } from "react";
 import { View, Text } from "@tarojs/components";
 import { useLoad } from "@tarojs/taro";
-import "./index.scss";
+import "./community.scss";
 
 // import subpages
-import FlightIndex from "../flight/index";
+import QuestionList from "../questionList/questionList";
 import NoExploit from "../../components/NoExploit"
 
 const DEFAULT_TAB_LIST = [
-  { title: "title1", tab: "flight", index: 0 },
-  { title: "title2", tab: "train", index: 1 },
-  { title: "title3", tab: "hotel", index: 2 },
-  { title: "title4", tab: "bus", index: 3 },
+  { title: "Bee Wiki", tab: "wiki", index: 0 },
+  { title: "Bee Class", tab: "class", index: 1 },
+  { title: "Bee News", tab: "news", index: 2 },
 ];
 
 // define a state for default tab selected
@@ -51,8 +50,9 @@ export default class Index extends Component {
             ))}
           </View>
         </View>
-        {DEFAULT_TAB_LIST[tabIndex]["tab"] === "flight" ? (
-          <FlightIndex />
+        {DEFAULT_TAB_LIST[tabIndex]["tab"] === "wiki" ? (
+          <QuestionList />
+          // <NoExploit />
         ) : (
           <NoExploit />
         )}
