@@ -6,6 +6,7 @@ import "./index.scss";
 // import subpages
 import FlightIndex from "../flight/index";
 import NoExploit from "../../components/NoExploit"
+import Community from "../community/community";
 
 const DEFAULT_TAB_LIST = [
   { title: "title1", tab: "flight", index: 0 },
@@ -51,7 +52,7 @@ export default class Index extends Component {
           </View>
         </View>
         {DEFAULT_TAB_LIST[tabIndex]["tab"] === "flight" ? (
-          <FlightIndex />
+          <Community />
         ) : (
           <NoExploit />
         )}
