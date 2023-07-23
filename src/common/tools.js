@@ -17,6 +17,7 @@ const tools = {
     } = opts;
 
     return new Promise((resolve, reject) => {
+      // Taro.request returns a promise type
       Taro.request({
         url,
         data: params,
@@ -43,7 +44,7 @@ const tools = {
   showLoading: (param = "") => {
     let dptOpts = {
       title: "Loading...",
-      mast: true, // prevent touch when loading
+      mast: true, // prevent touch when loading 防止触摸穿透
     };
 
     // 判断传入参数的类型 test the type of the input variables
