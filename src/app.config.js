@@ -1,9 +1,14 @@
+// document: https://taro-docs.jd.com/docs/app-config
+
 export default defineAppConfig({
   pages: [
     'pages/index/index',
     'pages/order/order',
     'pages/community/community',
     'pages/profile/profile',
+    'pages/map/map',
+    'pages/calendar/calendar',
+
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -13,15 +18,15 @@ export default defineAppConfig({
   },
   tabBar: {
     color: '#7F8389',
-    selectedColor: '#5495e6',
+    selectedColor: '#FF8D40',
     borderStyle: 'black', // upper border line color
     backgroundColor: '#fff', // background color of the tab bar
     list: [
       {
         pagePath: 'pages/index/index',
-        iconPath: 'assets/images/index-unselected.png',
-        selectedIconPath: 'assets/images/index-selected.png',
-        text: 'Index',
+        iconPath: 'assets/icon/Tabbar/home_inactivated@2x.png',
+        selectedIconPath: 'assets/icon/Tabbar/home_activated@2x.png',
+        text: '我的蜂箱',
       },
       {
         pagePath: 'pages/order/order',
@@ -30,16 +35,22 @@ export default defineAppConfig({
         text: 'Order',
       },
       {
+        pagePath: 'pages/map/map',
+        iconPath: 'assets/icon/Tabbar/map_inactivated@2x.png',
+        selectedIconPath: 'assets/icon/Tabbar/map_activated@2x.png',
+        text: '地图',
+      },
+      {
         pagePath: 'pages/community/community',
-        iconPath: 'assets/images/order-unselected.png',
-        selectedIconPath: 'assets/images/order-selected.png',
-        text: 'Community',
+        iconPath: 'assets/icon/Tabbar/community_inactivated@2x.png',
+        selectedIconPath: 'assets/icon/Tabbar/community_activated@2x.png',
+        text: '社区',
       },
       {
         pagePath: 'pages/profile/profile',
-        iconPath: 'assets/images/order-unselected.png',
-        selectedIconPath: 'assets/images/order-selected.png',
-        text: 'Profile',
+        iconPath: 'assets/icon/Tabbar/profile_inactivated@2x.png',
+        selectedIconPath: 'assets/icon/Tabbar/profile_activated@2x.png',
+        text: '个人信息',
       },
     ]
   }
