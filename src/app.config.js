@@ -4,6 +4,7 @@ export default defineAppConfig({
     'pages/order/order',
     'pages/community/community',
     'pages/profile/profile',
+    'pages/airportList/airportList',
 
   ],
   window: {
