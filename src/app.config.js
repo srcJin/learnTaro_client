@@ -7,7 +7,6 @@ export default defineAppConfig({
     'pages/community/community',
     'pages/profile/profile',
     'pages/map/map',
-    'pages/calendar/calendar',
 
   ],
   window: {
@@ -28,12 +27,12 @@ export default defineAppConfig({
         selectedIconPath: 'assets/icon/Tabbar/home_activated@2x.png',
         text: '我的蜂箱',
       },
-      {
-        pagePath: 'pages/order/order',
-        iconPath: 'assets/images/order-unselected.png',
-        selectedIconPath: 'assets/images/order-selected.png',
-        text: 'Order',
-      },
+      // {
+      //   pagePath: 'pages/order/order',
+      //   iconPath: 'assets/images/order-unselected.png',
+      //   selectedIconPath: 'assets/images/order-selected.png',
+      //   text: 'Order',
+      // },
       {
         pagePath: 'pages/map/map',
         iconPath: 'assets/icon/Tabbar/map_inactivated@2x.png',

@@ -5,12 +5,13 @@ import "./community.scss";
 
 // import subpages
 import QuestionList from "../../components/QuestionList";
-import NoExploit from "../../components/NoExploit"
+import NoExploit from "../../components/NoExploit";
+import WikiSearchBar from "../../components/WikiSearchBar";
 
 const DEFAULT_TAB_LIST = [
-  { title: "Bee Wiki", tab: "wiki", index: 0 },
-  { title: "Bee Class", tab: "class", index: 1 },
-  { title: "Bee News", tab: "news", index: 2 },
+  { title: "蜂农百科", tab: "wiki", index: 0 },
+  { title: "养蜂教学", tab: "class", index: 1 },
+  { title: "蜂业新闻", tab: "news", index: 2 },
 ];
 
 // define a state for default tab selected
@@ -33,7 +34,6 @@ export default class Index extends Component {
     return (
       <View className="index-container">
         <View className="top">
-        
           <View className="index-tab">
             {DEFAULT_TAB_LIST.map((item) => (
               // dynamically iterate className
@@ -49,13 +49,18 @@ export default class Index extends Component {
               </View>
             ))}
           </View>
+          <View className="community-search">
+            <WikiSearchBar />
+          </View>
         </View>
-        {DEFAULT_TAB_LIST[tabIndex]["tab"] === "wiki" ? (
-          <QuestionList />
-          // <NoExploit />
-        ) : (
-          <NoExploit />
-        )}
+        <View className="question-list-container">
+          {DEFAULT_TAB_LIST[tabIndex]["tab"] === "wiki" ? (
+            <QuestionList />
+          ) : (
+            // <NoExploit />
+            <NoExploit />
+          )}
+        </View>
       </View>
       // show the view according to the selected top tab
     );
