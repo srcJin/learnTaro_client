@@ -10,37 +10,37 @@
     z-index: 100;
     background: #FF8D40;
     // &.iphone{padding-top: 88px;}
-    .scrollbar {
-      width: 25%;
-      height: 12px;
-      transition: transform 0.3s ease-in-out;
-      z-index: -1;
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-    }
-    .scrollbar::after {
-      width: 78px;
-      height: 18px;
-      background: url(https://i.postimg.cc/9r6HWBT8/3.png)
-        no-repeat;
-      background-size: 78px 20px;
-      position: absolute;
-      content: "";
-      left: 50%;
-      bottom: 0;
-      margin-left: -30px;
-    }
+    // .scrollbar {
+    //   width: 25%;
+    //   height: 12px;
+    //   transition: transform 0.3s ease-in-out;
+    //   z-index: -1;
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: -4px;
+    // }
+    // .scrollbar::after {
+    //   width: 78px;
+    //   height: 18px;
+    //   background: url(https://i.postimg.cc/9r6HWBT8/3.png)
+    //     no-repeat;
+    //   background-size: 78px 20px;
+    //   position: absolute;
+    //   content: "";
+    //   left: 50%;
+    //   bottom: 0;
+    //   margin-left: -30px;
+    // }
   }
   .index-tab {
     margin: 0 10px;
     position: relative;
     display: flex;
     line-height: 36px;
-    height: 170px;
+    height: 120px;
     padding: 0 15px;
     .index_tab_item {
-      height: 168px;
+      // height: 160px;
       text-align: center;
       margin-top: 4px;
       z-index: 10;
@@ -53,11 +53,11 @@
         font-weight: 600;
       }
       &::before {
-        width: 98px;
-        height: 90px;
+        width: 60px;
+        height: 60px;
         background: url(https://i.postimg.cc/Z9ZkNKw6/4.png)
           no-repeat;
-        background-size: 400px 400px;
+        background-size: 300px 300px;
         content: "";
         display: block;
         margin: 6px auto 0;

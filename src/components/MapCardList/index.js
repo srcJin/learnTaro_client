@@ -19,12 +19,12 @@ export default class Index extends PureComponent {
           question_id: 1,
           answer_id: 3,
           mapcard_source_id: 23,
-          mapcard_source_name: "Rebecca1",
-          mapcard_source_txt: "Answered",
+          mapcard_source_name: "专家",
+          mapcard_source_txt: "",
           mapcard_source_img: img4,
-          question: "What should I do when it's winter",
+          question: "蜂农小宝",
           answer_ctnt:
-            "Choose the right location - Bees need a sunny location that is sheltered from wind and rain. Face the hives south or southeast for maximum sun exposure.",
+            "10年养蜂专家，欢迎前来咨询。",
           good_num: "112",
           comment_num: "18",
         },
@@ -32,12 +32,12 @@ export default class Index extends PureComponent {
           question_id: 2,
           answer_id: 25,
           mapcard_source_id: 24,
-          mapcard_source_name: "Alex2",
-          mapcard_source_txt: "React",
+          mapcard_source_name: "新手",
+          mapcard_source_txt: "",
           mapcard_source_img: img5,
-          question: "Beekeeping mite control？",
+          question: "蜂农小金",
           answer_ctnt:
-            "Screen bottom boards - These allow mites to fall through the screen to the ground when bees groom themselves. Helps reduce mite levels. Drone brood removal.",
+            "90后刚开始养蜂，请各位蜂友多指教！",
           good_num: "268",
           comment_num: "34",
         },
@@ -51,7 +51,7 @@ export default class Index extends PureComponent {
     return (
       <View>
         <Swiper
-          className="container"
+          className="mapcardlist-container"
           indicatorColor="#999"
           indicatorActiveColor="#333"
           circular

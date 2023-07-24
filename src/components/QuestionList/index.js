@@ -6,7 +6,7 @@ import {
   ScrollView,
 } from "@tarojs/components";
 import "./index.scss";
-import Feed from "../../components/MapCard";
+import Feed from "../../components/Feed";
 
 import img4 from "../../asset/images/icon1.jpeg";
 import img5 from "../../asset/images/icon8.jpg";

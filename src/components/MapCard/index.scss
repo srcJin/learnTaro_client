@@ -1,8 +1,8 @@
 .mapcard-item {
   width: 600px;
   padding: 30px 30px 20px;
-  margin: 15px auto;
-  background: #ffffff;
+  margin: auto;
+  background: #ffffffee;
   // border-top: 1px solid #eee;
   // border-bottom: 1px solid #eee;
   box-shadow: 0 10px 10px #aaa;
@@ -10,7 +10,7 @@
   // fix height
 
   .mapcard-content {
-    padding: 10px 0 0 0;
+    padding: 0 0 0 220px;
 
     .question {
       text,span {
@@ -24,16 +24,18 @@
       font-size: 24px;
       line-height: 28px;
       color: #5b5b5b;
+      height: 190px;
+
     }
     .answer-actions{
       width: 500px;
-      padding: 10px 0  0;
+      padding: 0 0 0 0;
       color: #a0acac;
 
       view,div,span {
         display: inline-block;
         vertical-align: text-bottom;
-        padding: 0 10px 0 0;
+        padding: 10px 10px 0 0;
         font-size: 24px;
       }
     }
@@ -49,8 +51,8 @@
       height: 45px;
       line-height: 45px;
       vertical-align: middle;
-      margin: 0 0 0 15px;
-      color: #a0acac;
+      margin: 0 0 0 20px;
+      color: #FF8D40;
       font-size: 26px;
     }
     .flex1 {
@@ -71,10 +73,10 @@
 
       image,img{
         display: inline-block;
-        width: 45px;
-        height: 45px;
-        border-radius: 45px;
-        top: 10px;
+        width: 200px;
+        height: 200px;
+        // border-radius: 45px;
+        margin-top: 50px;
         vertical-align: middle;
       }
     }
