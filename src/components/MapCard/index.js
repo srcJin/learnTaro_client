@@ -16,28 +16,28 @@ export default class MapCard extends PureComponent {
   navigateTo(url) {
     Taro.navigateTo({ url: url });
   }
-  
+
   render() {
     return (
-      <View className="feed-item">
-        <View className="feed-source">
+      <View className="mapcard-item">
+        <View className="mapcard-source">
           <View className="avatar flex1">
-            <Image src={this.props.feed_source_img}></Image>
+            <Image src={this.props.mapcard_source_img}></Image>
           </View>
           <View className="flex8">
-            <Text className="feed-source-txt">
-              {this.props.feed_source_name}
-              {this.props.feed_source_txt}
+            <Text className="mapcard-source-txt">
+              {this.props.mapcard_source_name}
+              {this.props.mapcard_source_txt}
             </Text>
           </View>
           <View className="flex1">
             <Image className="item-more" mode="aspectFit" src={more}></Image>
           </View>
         </View>
-        <View className="feed-content">
+        <View className="mapcard-content">
           <View
             className="question"
-            // onClick={this.navigateTo.bind(this, "/pages/question/question")}
+          // onClick={this.navigateTo.bind(this, "/pages/question/question")}
           >
             <View className="question-link">
               <Text>{this.props.question}</Text>
@@ -47,7 +47,7 @@ export default class MapCard extends PureComponent {
             <View>
               <Text
                 className="answer-txt"
-                // onClick={this.navigateTo.bind(this, "/pages/answer/answer")}
+              // onClick={this.navigateTo.bind(this, "/pages/answer/answer")}
               >
                 {this.props.answer_ctnt}
               </Text>
