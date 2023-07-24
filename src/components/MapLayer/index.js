@@ -116,6 +116,7 @@ class MapLayer extends Component {
         // showCompass
         scale="5"
         id="myMap"
+        includePoints={customMarkers.length ? customMarkers : []}
       >
       </Map>
     )

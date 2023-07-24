@@ -5,13 +5,16 @@ import {
   View,
   ScrollView,
 } from "@tarojs/components";
-import "./questionList.scss";
-import Feed from "../../components/feed/feed.js";
+
+import "./index.scss";
+
+import Feed from "../../components/Feed";
 
 import img4 from "../../asset/images/icon1.jpeg";
 import img5 from "../../asset/images/icon8.jpg";
 
-export default class QuestionList extends PureComponent {
+
+export default class mapCardList extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {

@@ -3,7 +3,7 @@ import { View, Image, Text } from "@tarojs/components";
 import more from "../../asset/images/more.png";
 import { PureComponent } from "react";
 
-import "./feed.scss";
+import "./index.scss";
 
 export default class Feed extends PureComponent {
 

@@ -4,7 +4,7 @@ import { useLoad } from "@tarojs/taro";
 import "./community.scss";
 
 // import subpages
-import QuestionList from "../questionList/questionList";
+import QuestionList from "../../components/QuestionList";
 import NoExploit from "../../components/NoExploit"
 
 const DEFAULT_TAB_LIST = [

@@ -1,4 +1,9 @@
-// import taro-ui's calendar css
+// import taro-ui's css
+/* Custom Theme */
+$color-brand: #FF8D40;
+$color-brand-light: #ffd541;
+$color-brand-dark: #cc9f01;
+
 @import "~taro-ui/dist/style/components/search-bar.scss";
 @import "~taro-ui/dist/style/components/button.scss";
 @import "~taro-ui/dist/style/components/icon.scss";
