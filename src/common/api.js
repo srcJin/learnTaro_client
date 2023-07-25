@@ -8,3 +8,9 @@ export const imageReq = (data) =>
     url: `${API_PRE}/images/images`,
     params: data,
   });
+
+export const loginReq = (data) => tools.request({
+  url: `${API_PRE}/login`,
+  params: data,
+  method: 'POST'
+})

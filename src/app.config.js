@@ -7,7 +7,7 @@ export default defineAppConfig({
     'pages/community/community',
     'pages/profile/profile',
     'pages/map/map',
-
+    'pages/login/login'
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -33,6 +33,12 @@ export default defineAppConfig({
       //   selectedIconPath: 'assets/images/order-selected.png',
       //   text: 'Order',
       // },
+      {
+        pagePath: 'pages/login/login',
+        iconPath: 'assets/images/order-unselected.png',
+        selectedIconPath: 'assets/images/order-selected.png',
+        text: 'Login',
+      },
       {
         pagePath: 'pages/map/map',
         iconPath: 'assets/icon/Tabbar/map_inactivated@2x.png',
