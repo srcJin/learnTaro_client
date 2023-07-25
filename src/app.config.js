@@ -2,30 +2,38 @@
 
 export default defineAppConfig({
   pages: [
-    'pages/index/index',
-    'pages/order/order',
-    'pages/community/community',
-    'pages/profile/profile',
-    'pages/map/map',
+    "pages/index/index",
+    "pages/order/order",
+    "pages/community/community",
+    "pages/profile/profile",
+    "pages/map/map",
 
+    "pages/dashboard/index",
+    "pages/dashboard/apiary/manage/index",
+    "pages/dashboard/apiary/manage/add/index",
+    "pages/dashboard/apiary/manage/edit/index",
+    "pages/dashboard/hive/index",
+    "pages/dashboard/hive/add/index",
+
+    "pages/notes/index",
   ],
   window: {
-    backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeeHive',
-    navigationBarTextStyle: 'black'
+    backgroundTextStyle: "light",
+    navigationBarBackgroundColor: "#fff",
+    navigationBarTitleText: "WeeHive",
+    navigationBarTextStyle: "black",
   },
   tabBar: {
-    color: '#7F8389',
-    selectedColor: '#FF8D40',
-    borderStyle: 'black', // upper border line color
-    backgroundColor: '#fff', // background color of the tab bar
+    color: "#7F8389",
+    selectedColor: "#FF8D40",
+    borderStyle: "black", // upper border line color
+    backgroundColor: "#fff", // background color of the tab bar
     list: [
       {
-        pagePath: 'pages/index/index',
-        iconPath: 'assets/icon/Tabbar/home_inactivated@2x.png',
-        selectedIconPath: 'assets/icon/Tabbar/home_activated@2x.png',
-        text: '我的蜂箱',
+        pagePath: "pages/index/index",
+        iconPath: "assets/icon/Tabbar/home_inactivated@2x.png",
+        selectedIconPath: "assets/icon/Tabbar/home_activated@2x.png",
+        text: "我的蜂箱",
       },
       // {
       //   pagePath: 'pages/order/order',
@@ -34,23 +42,23 @@ export default defineAppConfig({
       //   text: 'Order',
       // },
       {
-        pagePath: 'pages/map/map',
-        iconPath: 'assets/icon/Tabbar/map_inactivated@2x.png',
-        selectedIconPath: 'assets/icon/Tabbar/map_activated@2x.png',
-        text: '地图',
+        pagePath: "pages/map/map",
+        iconPath: "assets/icon/Tabbar/map_inactivated@2x.png",
+        selectedIconPath: "assets/icon/Tabbar/map_activated@2x.png",
+        text: "地图",
       },
       {
-        pagePath: 'pages/community/community',
-        iconPath: 'assets/icon/Tabbar/community_inactivated@2x.png',
-        selectedIconPath: 'assets/icon/Tabbar/community_activated@2x.png',
-        text: '社区',
+        pagePath: "pages/community/community",
+        iconPath: "assets/icon/Tabbar/community_inactivated@2x.png",
+        selectedIconPath: "assets/icon/Tabbar/community_activated@2x.png",
+        text: "社区",
       },
       {
-        pagePath: 'pages/profile/profile',
-        iconPath: 'assets/icon/Tabbar/profile_inactivated@2x.png',
-        selectedIconPath: 'assets/icon/Tabbar/profile_activated@2x.png',
-        text: '个人信息',
+        pagePath: "pages/profile/profile",
+        iconPath: "assets/icon/Tabbar/profile_inactivated@2x.png",
+        selectedIconPath: "assets/icon/Tabbar/profile_activated@2x.png",
+        text: "个人信息",
       },
-    ]
-  }
-})
+    ],
+  },
+});
