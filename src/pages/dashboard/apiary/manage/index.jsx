@@ -1,9 +1,9 @@
 import AppHeader from "@components/AppHeader/AppHeader";
-import React from "react";
-import "./index.less";
 import { View, Text } from "@tarojs/components";
 import ApiaryManageButton from "@components/ApiaryManageBlock/ApiaryMangeButton";
 import Taro from "@tarojs/taro";
+import React from "react";
+import "./index.less";
 
 const ApairyManagement = () => {
   const buttonText = ["Edit Apiary", "Add Apiary", "Delete Apiary"];
@@ -13,28 +13,28 @@ const ApairyManagement = () => {
       value: "Edit Apiary",
       onClick: () =>
         Taro.navigateTo({
-          url: "/pages/dashboard/apiary/manage/edit/index"
-        })
+          url: "/pages/dashboard/apiary/manage/edit/index",
+        }),
     },
     {
       value: "Add Apiary",
       onClick: () =>
         Taro.navigateTo({
-          url: "/pages/dashboard/apiary/manage/add/index"
-        })
+          url: "/pages/dashboard/apiary/manage/add/index",
+        }),
     },
     {
       value: "Delete Apiary",
       onClick: () =>
         Taro.navigateTo({
-          url: "/pages/dashboard/index"
-        })
-    }
+          url: "/pages/dashboard/index",
+        }),
+    },
   ];
 
   return (
     <View className="app-manage-apiary">
-      <AppHeader title="Manage Apiary" />
+      <AppHeader title="Manage Apiary" isMainPage={false} />
       <View className="text-wrapper">
         <Text className="text">Manage Apairy</Text>
       </View>

@@ -20,16 +20,16 @@ const UserDashboard = () => {
             unit: "kg",
           },
           voice: {
-            value: 100,
+            value: 70,
             unit: "dB",
           },
           humidity: {
             outside: {
-              value: 100,
+              value: 80,
               unit: "%",
             },
             inside: {
-              value: 100,
+              value: 90,
               unit: "%",
             },
           },
@@ -68,28 +68,28 @@ const UserDashboard = () => {
         },
         {
           name: "Hive 2",
-          tags: ["Warning", "Unhealthy"],
+          tags: [],
           weight: {
             value: 100,
             unit: "kg",
           },
           voice: {
-            value: 100,
+            value: 80,
             unit: "dB",
           },
           humidity: {
             outside: {
-              value: 100,
+              value: 60,
               unit: "%",
             },
             inside: {
-              value: 100,
+              value: 80,
               unit: "%",
             },
           },
           temperature: {
             outside: {
-              value: 100,
+              value: 90,
               unit: "°C",
             },
             inside: {
@@ -122,7 +122,7 @@ const UserDashboard = () => {
         },
         {
           name: "Hive 3",
-          tags: ["Warning", "Unhealthy"],
+          tags: [],
           weight: {
             value: 100,
             unit: "kg",
@@ -371,11 +371,7 @@ const UserDashboard = () => {
     return count;
   };
 
-  const [currentApiary, setCurrentApiary] = useState < Apairy > data[0];
-
-  useEffect(() => {
-    // console.log(currentApiary);
-  }, [currentApiary]);
+  const [currentApiary, setCurrentApiary] = useState(data[0]);
 
   return (
     <View className="dashboard">

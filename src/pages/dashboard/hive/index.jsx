@@ -1,7 +1,12 @@
-import AppHeader from "@components/AppHeader/AppHeader";
 import { View } from "@tarojs/components";
+import AppHeader from "@components/AppHeader/AppHeader";
+import HiveDataBlock from "@components/HiveDataBlock/HiveDataBlock";
+import HiveInfoBlock from "@components/HiveInfoBlock/HiveInfoBlock";
+import HiveInspectionBlock from "@components/HiveInspectionBlock/HiveInspectionBlock";
+import HiveHistoryBlock from "@components/HiveHistoryBlock/HiveHistoryBlock";
+import HiveNoteBlock from "@components/HiveNoteBlock/HiveNoteBlock";
 import React from "react";
-import { Hive } from "src/types/DataTypes";
+import "./index.less";
 
 const HiveDashboard = () => {
   const data = {
@@ -12,16 +17,16 @@ const HiveDashboard = () => {
       unit: "kg",
     },
     voice: {
-      value: 100,
+      value: 70,
       unit: "dB",
     },
     humidity: {
       outside: {
-        value: 100,
+        value: 80,
         unit: "%",
       },
       inside: {
-        value: 100,
+        value: 90,
         unit: "%",
       },
     },
@@ -59,11 +64,33 @@ const HiveDashboard = () => {
     ],
   };
 
-  const [hive, setHive] = React.useState(data);
+  const [hive, setHive] = React.useState < Hive > data;
+
+  const handleInspectionClick = () => {
+    setHive({
+      ...hive,
+      questions: [
+        {
+          ...hive.questions[0],
+          answer: hive.questions[0].answer === "Yes" ? "No" : "Yes",
+        },
+      ],
+    });
+  };
 
   return (
     <View className="hive-page">
-      <AppHeader title="Hive Data" />
+      <AppHeader title="Hive Data" isMainPage={false} />
+      <View className="hive-block-wrapper">
+        <HiveInfoBlock hive={hive} />
+      </View>
+      <HiveInspectionBlock
+        hive={hive}
+        handleInspectionClick={handleInspectionClick}
+      />
+      <HiveDataBlock hive={hive} />
+      <HiveHistoryBlock />
+      <HiveNoteBlock />
     </View>
   );
 };

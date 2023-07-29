@@ -1,10 +1,24 @@
 import React from "react";
-import { View, Text } from "@tarojs/components";
+import { View, Text, Image } from "@tarojs/components";
 import "./AppHeader.less";
+import Taro from "@tarojs/taro";
 
-const AppHeader = ({ title }) => {
+const handleClick = () => {
+  Taro.navigateBack();
+};
+const AppHeader = ({ title, isMainPage = true }) => {
   return (
     <View className="app-header">
+      {isMainPage ? (
+        <span></span>
+      ) : (
+        <View className="app-header-back-button" onClick={handleClick}>
+          <Image
+            className="app-header-back-button-icon"
+            src={require("../../assets/image/Setting.svg")}
+          />
+        </View>
+      )}
       <Text>{title}</Text>
     </View>
   );

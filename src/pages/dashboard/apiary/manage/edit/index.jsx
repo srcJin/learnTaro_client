@@ -1,31 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { View, Text, Input, Form, Image } from "@tarojs/components";
-import "./index.less";
 import AppHeader from "@components/AppHeader/AppHeader";
 import FormButton from "@components/FormButton/FormButton";
 import Taro from "@tarojs/taro";
-
-interface editApariyFormDataModel {
-  apariyName: string;
-}
+import "./index.less";
 
 const ApairyManageEdit = () => {
-  const [apariyFormData, setApariyFormData] = useState<editApariyFormDataModel>(
+  const [apariyFormData, setApariyFormData] =
+    useState <
+    editApariyFormDataModel >
     {
-      apariyName: ""
-    }
-  );
+      apariyName: "",
+    };
 
-  const handleFormChange = (e: any) => {
+  const handleFormChange = (e) => {
     setApariyFormData({
       ...apariyFormData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleFormCancel = () => {
     setApariyFormData({
-      apariyName: ""
+      apariyName: "",
     });
   };
 
@@ -34,27 +31,23 @@ const ApairyManageEdit = () => {
       value: "Cancel",
       onClick: () =>
         Taro.navigateTo({
-          url: "/pages/dashboard/index"
+          url: "/pages/dashboard/index",
         }),
-      style: { backgroundColor: "#ccc", marginRight: "5px" }
+      style: { backgroundColor: "#ccc", marginRight: "5px" },
     },
     {
       value: "Save",
       onClick: () =>
         Taro.navigateTo({
-          url: "/pages/dashboard/index"
+          url: "/pages/dashboard/index",
         }),
-      style: { backgroundColor: "#f8b933", marginLeft: "5px" }
-    }
+      style: { backgroundColor: "#f8b933", marginLeft: "5px" },
+    },
   ];
-
-  // useEffect(() => {
-  //   console.log(apariyFormData);
-  // }, [apariyFormData]);
 
   return (
     <View className="apairy-manage-edit">
-      <AppHeader title="Manage Apiary" />
+      <AppHeader title="Manage Apiary" isMainPage={false} />
       <View className="apairy-manage-edit-text-wrapper">
         <Text className="apairy-manage-edit-text">Edit Apiary</Text>
       </View>

@@ -44,13 +44,23 @@ const ApiaryManagementBlock = ({ numberOfHives, numberOfWarnings }) => {
       <View className="managementBottom">
         <View className="managementBottomLeft">
           <View className="managementButtons" onClick={handleAddHivesClick}>
-            <View className="managementCircle" />
+            <View className="managementCircle">
+              <Image
+                className="editImage"
+                src={require("../../assets/image/Setting.svg")}
+              />
+            </View>
             <Text className="managementText">Add Hives</Text>
           </View>
         </View>
         <View className="managementBottomRight">
           <View className="managementButtons" onClick={handleManageApiaryClick}>
-            <View className="managementCircle" />
+            <View className="managementCircle">
+              <Image
+                className="editImage"
+                src={require("../../assets/image/Setting.svg")}
+              />
+            </View>
             <Text className="managementText">Manage Apairy</Text>
           </View>
         </View>

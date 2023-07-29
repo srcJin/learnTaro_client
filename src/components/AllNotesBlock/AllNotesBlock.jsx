@@ -5,7 +5,7 @@ import "./AllNotesBlock.less";
 
 const handleAllNotesClick = () => {
   Taro.navigateTo({
-    url: "/pages/notes/index",
+    url: "/pages/notes/index"
   });
 };
 

@@ -5,24 +5,23 @@ import AppHeader from "@components/AppHeader/AppHeader";
 import FormButton from "@components/FormButton/FormButton";
 import Taro from "@tarojs/taro";
 
-interface addApariyFormDataModel {
-  apariyName: string;
-}
-
 const ApairyManageAdd = () => {
-  const [apariyFormData, setApariyFormData] = useState<addApariyFormDataModel>({
-    apariyName: ""
-  });
+  const [apariyFormData, setApariyFormData] =
+    useState <
+    addApariyFormDataModel >
+    {
+      apariyName: "",
+    };
 
-  const handleFormChange = (e: any) => {
+  const handleFormChange = (e) => {
     setApariyFormData({
-      apariyName: e.detail.value
+      apariyName: e.detail.value,
     });
   };
 
   const handleFormCancel = () => {
     setApariyFormData({
-      apariyName: ""
+      apariyName: "",
     });
   };
 
@@ -31,27 +30,23 @@ const ApairyManageAdd = () => {
       value: "Cancel",
       onClick: () =>
         Taro.navigateTo({
-          url: "/pages/dashboard/index"
+          url: "/pages/dashboard/index",
         }),
-      style: { backgroundColor: "#ccc", marginRight: "5px" }
+      style: { backgroundColor: "#ccc", marginRight: "5px" },
     },
     {
       value: "Save",
       onClick: () =>
         Taro.navigateTo({
-          url: "/pages/dashboard/index"
+          url: "/pages/dashboard/index",
         }),
-      style: { backgroundColor: "#f8b933", marginLeft: "5px" }
-    }
+      style: { backgroundColor: "#f8b933", marginLeft: "5px" },
+    },
   ];
-
-  //   useEffect(() => {
-  //     console.log(apariyFormData);
-  //   }, [apariyFormData]);
 
   return (
     <View className="apairy-manage-add">
-      <AppHeader title="Manage Apiary" />
+      <AppHeader title="Manage Apiary" isMainPage={false} />
       <View className="apairy-manage-add-text-wrapper">
         <Text className="apairy-manage-add-text">Add Apiary</Text>
       </View>
